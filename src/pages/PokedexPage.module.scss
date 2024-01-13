@@ -1,0 +1,195 @@
+.pokedex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemonImgContainer {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  background-image: url('../../public/Monsterball_BG2.png');
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemonImg {
+  width: auto;
+  height: 250px;
+
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.pokemonName {
+  padding: 10px 30px 10px 30px;
+  width: 250px;
+  height: 140px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 #d9d9d9;
+  text-align: left;
+  background-color: #fff;
+  color: black;
+}
+.statusContainer {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.status {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+.statusL {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 4px solid #e6e6e6;
+  margin: 10px;
+  padding: 10px;
+}
+.statusR {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 8px;
+  border: 4px solid #e6e6e6;
+  margin: 10px;
+  padding: 10px;
+}
+.description {
+  width: 726px;
+  border-radius: 8px;
+  border: 4px solid #e6e6e6;
+  margin: 10px;
+  padding: 10px;
+}
+.hp {
+  margin-right: 10px;
+}
+.hpColumn {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hpGage {
+  display: flex;
+  flex-direction: row;
+}
+
+.attack {
+  margin-right: 10px;
+}
+.attackColumn {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.attackGage {
+  display: flex;
+  flex-direction: row;
+}
+.defense {
+  margin-right: 10px;
+}
+.defenseColumn {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.defenseGage {
+  display: flex;
+  flex-direction: row;
+}
+
+.spAttack {
+  margin-right: 10px;
+}
+.spAttackColumn {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.spAttackGage {
+  display: flex;
+  flex-direction: row;
+}
+.spDefense {
+  margin-right: 10px;
+}
+.spDefenseColumn {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.spDefenseGage {
+  display: flex;
+  flex-direction: row;
+}
+.speed {
+  margin-right: 10px;
+}
+.speedColumn {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.speedGage {
+  display: flex;
+  flex-direction: row;
+}
+
+.continueButton {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.continueButtonImg {
+  width: 250px;
+  height: auto;
+}
+
+.yellowGage{
+  width:15px;
+  height:35px;
+  border-radius:8px;
+  margin-right: 5px;
+  background-color: #fc0;
+}
+
+.whiteGage{
+  width:15px;
+  height:35px;
+  border-radius:8px;
+  margin-right: 5px;
+  background-color:darkgray
+}
+
+.continueButtonContainer {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-image: url('../../public/Monsterball_BG2.png');
+  justify-content: center
+}
