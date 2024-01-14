@@ -29,9 +29,11 @@ export const GachaAction = () => {
         }
     }, [videoUrl]);
 
-    return (
-        <video className={styles.gachaAction} ref = {videoRef} src={videoUrl} onEnded={() => {
-            navigate('/pokemon-silhouette-quiz/status')
-        }}/>
-    )
+    if(videoUrl && videoRef){
+        return (
+            <video className={styles.gachaAction} ref = {videoRef} src={videoUrl} onEnded={() => {
+                navigate('/pokemon-silhouette-quiz/status')
+            }}/>
+        )
+    }
 }
