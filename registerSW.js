@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/pokemon-silhouette-quiz/sw.js', { scope: '/pokemon-silhouette-quiz/' })})}
