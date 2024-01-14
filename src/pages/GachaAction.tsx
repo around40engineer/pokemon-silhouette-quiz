@@ -9,13 +9,13 @@ export const GachaAction = () => {
         const probability = Math.floor(Math.random()*100)
         // 3-❼
         if(probability>90){
-            setVideoUrl('../../public/gachaActionMaster.mov')
+            setVideoUrl('gachaActionMaster.mov')
         } else if (probability>70){
-            setVideoUrl('../../public/gachaActionHyper.mov')
+            setVideoUrl('gachaActionHyper.mov')
         } else if (probability>40){
-            setVideoUrl('../../public/gachaActionSuper.mov')
+            setVideoUrl('gachaActionSuper.mov')
         } else {
-            setVideoUrl('../../public/gachaAction.mov')
+            setVideoUrl('gachaAction.mov')
         }
     }
 
@@ -24,7 +24,9 @@ export const GachaAction = () => {
     }, []);
 
     useEffect(() => {
-        videoRef.current?.play()
+        if(videoUrl){
+            videoRef.current?.play()
+        }
     }, [videoUrl]);
 
     return (

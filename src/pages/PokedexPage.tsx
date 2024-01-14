@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 
 export const PokedexPage = () => {
     const navigate = useNavigate()
-    const [imgUrl, setImgUrl] = useState('../../public/continueButton.svg');
+    const [buttonImgUrl, setButtonImgUrl] = useState('continueButton.svg');
     const [pokemonId] = useState(Math.floor(Math.random()*1010));
     const [pokemon, setPokemon] = useState();
     const [pokemonImg, setPokemonImg] = useState<string>();
@@ -128,8 +128,8 @@ export const PokedexPage = () => {
                         }</div>
                         <div>
                             {gender.map((element) => {
-                                if(element === 'f'){return <img src='../../public/icon_female.svg'/>}
-                                else if(element === 'm'){return <img src='../../public/icon_male.svg'/>}
+                                if(element === 'f'){return <img src='icon_female.svg'/>}
+                                else if(element === 'm'){return <img src='icon_male.svg'/>}
                                 else {return <p>不明</p>}
                             })}
 
@@ -208,9 +208,9 @@ export const PokedexPage = () => {
                     <button className={style.continueButton}>
                         <img
                             className={style.continueButtonImg}
-                            src={imgUrl}
-                            onMouseLeave={() => {setImgUrl('../../public/continueButton.svg')}}
-                            onMouseEnter={() => {setImgUrl('../../public/continueButtonHover.svg')}}
+                            src={buttonImgUrl}
+                            onMouseLeave={() => {setButtonImgUrl('continueButton.svg')}}
+                            onMouseEnter={() => {setButtonImgUrl('continueButtonHover.svg')}}
                             onClick={() => {navigate('/pokemon-silhouette-quiz')}}
                         />
                     </button>
