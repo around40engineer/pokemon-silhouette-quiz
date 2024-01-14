@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/pokemon-silhouette-quiz/dev-sw.js?dev-sw', { scope: '/pokemon-silhouette-quiz/', type: 'classic' })

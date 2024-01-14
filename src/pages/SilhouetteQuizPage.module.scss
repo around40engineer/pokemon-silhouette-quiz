@@ -1,0 +1,42 @@
+.pokemonSilhouetteContainer {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  background-image: url('../Monsterball_BG2.png');
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemonSilhouette{
+  height: 150px;
+  width: auto;
+  text-align: center;
+  flex: 0 0 auto;
+  filter: brightness(0%);
+}
+.quizContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.answerButton{
+  width: 100%;
+  height: auto;
+}
+
+.answerButtonImg{
+  width: 40%;
+  height: auto;
+}
+.quiz{
+  padding: 10px 20px 10px 20px;
+  width: 30%;
+  height: 20%;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 #d9d9d9;
+  text-align: left;
+  background-color: #fff;
+  color: black;
+}

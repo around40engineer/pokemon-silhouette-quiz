@@ -4,8 +4,8 @@ import {
 } from 'react-router-dom'
 import './App.css'
 import {TopPage} from './pages/TopPage.tsx';
-import {GachaAction} from './pages/GachaAction.tsx';
 import {PokedexPage} from './pages/PokedexPage.tsx';
+import {SilhouetteQuizPage} from './pages/SilhouetteQuizPage.tsx';
 
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
                element={<TopPage />}
            />
           <Route
-              path='/pokemon-silhouette-quiz/action'
-              element={<GachaAction />}
+              path='/pokemon-silhouette-quiz/quiz'
+              element={<SilhouetteQuizPage />}
           />
           <Route
               path='/pokemon-silhouette-quiz/status'

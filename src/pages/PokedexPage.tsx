@@ -1,11 +1,11 @@
 import style from './PokedexPage.module.scss'
 import {useEffect, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 export const PokedexPage = () => {
-    const navigate = useNavigate()
     const [buttonImgUrl, setButtonImgUrl] = useState('continueButton.svg');
-    const [pokemonId] = useState(Math.floor(Math.random()*1010));
+    const search = useLocation().search
+    const pokemonId = (new URLSearchParams(search)).get('id')
     const [pokemon, setPokemon] = useState();
     const [pokemonImg, setPokemonImg] = useState<string>();
     const [species, setSpecies] = useState();
@@ -28,9 +28,9 @@ export const PokedexPage = () => {
         for (let i = 0; i < 15-gageCount; i++){
             gage.push('w')
         }
-        return gage.map((gage)=>{
-            if(gage==='y'){return <div className={style.yellowGage}/>}
-            return <div className={style.whiteGage}/>
+        return gage.map((gage,index)=>{
+            if(gage==='y'){return <div key={index} className={style.yellowGage}/>}
+            return <div key={index} className={style.whiteGage}/>
         })
     }
 
@@ -114,7 +114,7 @@ export const PokedexPage = () => {
         }
     }, [species]);
 
-    if(pokemon&&species){
+    if(pokemon&&species&&pokemonId){
         return (
             <div className={style.pokedex}>
                 <div className={style.pokemonImgContainer}>
@@ -127,12 +127,11 @@ export const PokedexPage = () => {
                             species.names.filter(element => element.language.name === 'ja')[0].name
                         }</div>
                         <div>
-                            {gender.map((element) => {
-                                if(element === 'f'){return <img src='icon_female.svg'/>}
-                                else if(element === 'm'){return <img src='icon_male.svg'/>}
-                                else {return <p>不明</p>}
+                            {gender.map((element,index) => {
+                                if(element === 'f'){return <img key={index} src='icon_female.svg'/>}
+                                else if(element === 'm'){return <img key={index} src='icon_male.svg'/>}
+                                else {return <p key={index} >不明</p>}
                             })}
-
                         </div>
                     </div>
                 </div>
@@ -205,15 +204,14 @@ export const PokedexPage = () => {
                     </div>
                 </div>
                 <div className={style.continueButtonContainer}>
-                    <button className={style.continueButton}>
+                    <a className={style.continueButton} href='/pokemon-silhouette-quiz'>
                         <img
                             className={style.continueButtonImg}
                             src={buttonImgUrl}
                             onMouseLeave={() => {setButtonImgUrl('continueButton.svg')}}
                             onMouseEnter={() => {setButtonImgUrl('continueButtonHover.svg')}}
-                            onClick={() => {navigate('/pokemon-silhouette-quiz')}}
                         />
-                    </button>
+                    </a>
                 </div>
             </div>
         )
